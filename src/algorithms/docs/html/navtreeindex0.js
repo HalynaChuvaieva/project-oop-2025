@@ -1,0 +1,20 @@
+var NAVTREEINDEX0 =
+{
+"_a_l_v_tree_8js.html":[0,0,0],
+"_balanced_b_s_t_8js.html":[0,0,1],
+"_directed_graph_8js.html":[0,0,5],
+"_graph_8js.html":[0,0,6],
+"_linked_list_8js.html":[0,0,7],
+"_negative_weighted_graph_8js.html":[0,0,9],
+"_simple_b_s_t_8js.html":[0,0,10],
+"_simple_queue_8js.html":[0,0,11],
+"_simple_stack_8js.html":[0,0,12],
+"_weighted_graph_8js.html":[0,0,13],
+"benchmark__graph_8js.html":[0,0,2],
+"benchmark__lists_8js.html":[0,0,3],
+"benchmark__trees_8js.html":[0,0,4],
+"files.html":[0,0],
+"index.html":[],
+"my__structures_8js.html":[0,0,8],
+"pages.html":[]
+};
