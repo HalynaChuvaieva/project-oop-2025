@@ -55,12 +55,55 @@ suiteDelete
 });
 
 
+// ===============================================
+//  BENCHMARK FOR SEARCH
+// ===============================================
+
+const suiteSearch = new Benchmark.Suite('Tree Search Benchmarks');
+
+suiteSearch
+.add('My SimpleBST Search', function() {
+    for (const v of searchData) { myBST.search(v); } // Припускаємо, що у SimpleBST є метод search
+})
+.add('My AVLTree Search', function() {
+    for (const v of searchData) { myAVL.search(v); } // Припускаємо, що у AVLTree є метод search
+})
+.add('js-data-structures BST Search', function() {
+    for (const v of searchData) { libBST.search(v); }
+});
+
+// ===============================================
+// BENCHMARK for Traversal - Inorder
+// ===============================================
+
+const suiteTraversal = new Benchmark.Suite('Tree Traversal Benchmarks');
+
+suiteTraversal
+.add('My SimpleBST Inorder', function() {
+    myBST.inorder();
+})
+.add('My AVLTree Inorder', function() {
+    myAVL.inorder();
+})
+.add('js-data-structures BST Inorder', function() {
+    libBST.inorder(); 
+});
+
+
 console.log('--- STARTING TREE BENCHMARKS ---');
 suiteInsert.on('cycle', (e) => console.log(String(e.target)))
-           .on('complete', function() { console.log('\n***Fastest tests of INSERTS ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
+           .on('complete', function() { console.log('\n*** Найшвидші тести ВСТАВКИ ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
+           .run({ 'async': false });
+
+suiteSearch.on('cycle', (e) => console.log(String(e.target)))
+           .on('complete', function() { console.log('\n*** Найшвидші тести ПОШУКУ ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
+           .run({ 'async': false });
+
+suiteTraversal.on('cycle', (e) => console.log(String(e.target)))
+           .on('complete', function() { console.log('\n*** Найшвидші тести ОБХОДУ ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
            .run({ 'async': false });
 
 suiteDelete.on('cycle', (e) => console.log(String(e.target)))
-           .on('complete', function() { console.log('\n*** Fastest REMOVAL tests ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
+           .on('complete', function() { console.log('\n*** Найшвидші тести ВИДАЛЕННЯ ***'); console.log(this.filter('fastest').map('name')); console.log('---------------------------------'); })
            .run({ 'async': false });
 console.log('--- END OF TREE BENCHMARKS ---');
