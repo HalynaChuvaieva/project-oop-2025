@@ -15,7 +15,7 @@
 
 const Benchmark = require('benchmark');
 const { BinarySearchTree } = require('js-data-structures');
-const { SimpleBST, AVLTree } = require('./my_structures'); 
+const { SimpleBST, AVLTree } = require('../../src/algorithms/my_structures'); 
 const N = 10000;
 const insertData = Array.from({ length: N }, () => Math.floor(Math.random() * N * 10));
 const deleteData = insertData.slice(0, 5000);

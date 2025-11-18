@@ -24,5 +24,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "docs", "tests/benchmark-tests/benchmark_graph.js", "tests/benchmark-tests/benchmark_lists.js", "tests/benchmark-tests/benchmark_trees.js"]
 }

@@ -13,7 +13,7 @@
 
 const Benchmark = require('benchmark');
 const { DoublyLinkedList } = require('collections/list');
-const { LinkedList, SimpleQueue, SimpleStack } = require('./my_structures'); 
+const { LinkedList, SimpleQueue, SimpleStack } = require('../../src/algorithms/my_structures'); 
 
 /**
  * @brief Number of test operations.

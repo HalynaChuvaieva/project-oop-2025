@@ -33,7 +33,7 @@ const Graphology = require('graphology');
 const { bfs, dfs } = require('graphology-traversal');
 const dijkstraGraphology = require('graphology-shortest-path/dijkstra').bidirectional;
 const JGraph = require('js-graph-algorithms');
-const { Graph, WeightedGraph, NegativeWeightedGraph, DirectedGraph } = require('./my_structures');
+const { Graph, WeightedGraph, NegativeWeightedGraph, DirectedGraph } = require('../../src/algorithms/my_structures');
 
 /**
  * @brief Number of vertices used in all benchmarks.
